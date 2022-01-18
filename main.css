@@ -1,0 +1,70 @@
+body {
+    font: 400 1em/1.5 "Neuton";
+    background: #090d00;
+    color: rgba(255,255,255,.25);
+    height: 100vh;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.wrapper {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content {
+    text-transform: uppercase;
+	letter-spacing: .5em;
+	display: inline-block;
+	border: 4px double rgba(255,255,255,.25);
+	border-width: 4px 0;
+	padding: 1.5em 0em;
+}
+
+.content--clicked {
+    border: none;
+    color: transparent;
+}
+
+.content--clicked .content-name,
+.content--clicked .content-name:hover {
+    text-shadow: none;
+    background: none;
+}
+
+.content-name {
+    font: 700 4em/1 "Oswald", sans-serif;
+  	letter-spacing: 0;
+  	padding: .25em 0 .325em;
+    display: block;
+    margin: 0 auto;
+  	text-shadow: 0 0 80px rgba(255,255,255,.5);
+}
+
+.content-name:hover {
+    background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 80s linear infinite;
+
+
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
+}
+
+
+@-webkit-keyframes aitf {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+}
